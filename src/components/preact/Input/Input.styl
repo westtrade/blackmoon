@@ -1,0 +1,101 @@
+.input
+	display inline-flex
+	flex-direction row
+	flex-wrap wrap
+	color #fff
+	vertical-align top
+	box-sizing border-box
+	& ~ .input
+		margin-left 10px
+
+
+.element
+	min-height 25px
+	background-color transparent
+	border none
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button
+		-webkit-appearance none
+		margin 0
+	-moz-appearance textfield
+	appearance textfield
+	text-align left
+	font-size 14px
+	line-height normal
+	box-sizing border-box
+	padding 0
+	margin 0
+	border-bottom solid 1px rgba(100, 116, 173, 0.2)
+	width 100%
+
+	transition border-color .3s ease-in-out
+
+	&:invalid
+	&:required
+		box-shadow none
+	&:focus
+		outline 0
+	&-wrapper
+		position relative
+		width 100%
+		&:hover
+			.element
+				border-color  #656E8D
+
+
+
+
+.has-addon
+	.element
+		padding-right 40px
+
+
+
+.has-error
+	.label
+		color #FF4747
+
+	.element
+		border-color #FF4747
+	&:hover
+		.element
+			border-color lighten(#FF4747, 20)
+		.label
+			color lighten(#FF4747, 20)
+		.error
+			color lighten(#FF4747, 20)
+.error
+	color #FF4747
+	transition color .3s ease-in-out, opacity .3s ease-in-out
+	font-size 12px
+	line-height 16px
+	opacity 1
+
+.label
+	margin-right 10px
+	font-size 14px
+	line-height 25px
+	transition color .3s ease-in-out
+
+
+.addon
+	color #656E8D
+	position absolute
+	right 0
+	top 0
+	line-height 25px
+
+.element
+	&:focus
+		border-color #fff!important
+
+.active
+	.element
+		border-color #fff
+
+	&.has-error
+		.label
+			color #fff
+
+	.error
+		opacity 0

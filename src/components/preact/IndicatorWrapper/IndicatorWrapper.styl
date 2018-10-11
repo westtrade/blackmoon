@@ -1,0 +1,60 @@
+.wrapper
+	cursor pointer
+	padding 0 10px
+	min-width 180px
+	text-align left
+	vertical-align top
+	position relative
+	&::before
+		content ''
+		border 1px solid transparent
+		position absolute
+		top 0
+		left 0
+		bottom 0
+		right 0
+		pointer-events none
+		display block
+		border-radius 4px
+.header
+	line-height 25px
+	height 25px
+	color #fff
+	font-weight bold
+	font-size 13px
+	user-select none
+
+.title
+	display inline-block
+	float left
+
+.toggler
+	float right
+	margin-right -10px
+
+.content
+	// transition all .2s
+	max-height 200px
+	margin 5px 0
+
+
+.is-closed
+	background-color transparent
+	height 25px
+	&::before
+		border-color rgba(100, 116, 173, 0.2)
+
+	&:hover
+		background-color transparent
+		&::before
+			border-color rgba(100, 116, 173, 0.2)
+
+	&:active
+		background-color transparent
+		&::before
+			border-color rgba(100, 116, 173, 0.2)
+
+	.content
+		max-height 0px
+		overflow hidden
+		// transition all .2s

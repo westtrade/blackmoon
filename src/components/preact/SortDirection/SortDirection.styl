@@ -1,0 +1,29 @@
+.wrapper
+	user-select none
+	cursor pointer
+	position relative
+	transition color .3s ease-in-out
+	display inline-block
+
+.icon
+	position absolute
+	right 0
+	top 50%
+	margin-top -3px
+	opacity 0
+	transition opacity .3s ease-in-out
+	&-wrapper
+		display inline-block
+		position relative
+		height 100%
+		width 5px
+		margin-left 4px
+		vertical-align middle
+
+	path
+		transition d 0.35s ease-in-out
+
+.isActive
+	color #97A3D0
+	.icon
+		opacity 1

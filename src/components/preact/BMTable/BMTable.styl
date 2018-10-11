@@ -1,0 +1,55 @@
+.wrapper
+	position relative
+
+
+.header
+	display grid
+	grid-template-columns inherit
+	&-cell
+		background-color rgba(45,50,66,.4)
+		color #656E8D
+		text-transform uppercase
+		cursor pointer
+		padding  8px 15px
+		font-size 12px
+		line-height 16px
+
+
+.table
+	::-webkit-scrollbar
+		width 0
+
+	overflow-y auto
+	display grid
+	grid-template-columns inherit
+	position relative
+
+
+
+
+.cell
+	overflow hidden
+	text-overflow ellipsis
+	padding  0px 10px
+	margin 0 5px
+	color #fff
+	font-size 12px
+	font-variant small-caps
+	font-family 'PT Sans', sans-serif
+	font-style normal
+	font-weight normal
+	line-height normal
+	border-radius 4px
+	height 25px
+	line-height 25px
+	cursor pointer
+	// &:after
+	// 	content ''
+	// 	display block
+	// 	position absolute
+	// 	left 0
+	// 	right 0
+	// 	background: rgba(100, 116, 173, 0.2)
+	// &:hover
+	// 	&:nth-child(5n+5)
+	// 		background: rgba(100, 116, 173, 0.2)

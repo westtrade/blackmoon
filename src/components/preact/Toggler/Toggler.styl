@@ -1,0 +1,87 @@
+$inactive-color = #2D3242
+$active-color = #656E8D
+.toggler
+	background alpha(#656E8D, .2)
+	display inline-block
+	border-radius 4px
+	color #656E8D
+	font-size 12px
+	text-align center
+	box-sizing border-box
+	font-weight bold
+	transition background .3s
+	// padding 5px
+	line, path, circle, rect
+		stroke $active-color
+		fill $active-color
+		transition all .2s
+
+	&.outlined
+		background-color transparent
+		position relative
+		color #fff
+		font-weight normal
+		&::after
+			content ''
+			position absolute
+			left -1px
+			top -1px
+			right -1px
+			bottom -1px
+			pointer-events none
+			border-radius 4px
+			border 1px solid alpha(#6474AD, .2)
+		&:active
+		&:hover
+			background-color transparent
+			line, path, circle, rect
+				stroke #fff
+				fill #fff
+				transition all .2s
+
+	&:focus
+		outline none
+	&:hover
+		background alpha(lighten(#656E8D, 20%), .2)
+		line, path, circle, rect
+			stroke lighten($active-color, 20%)
+			fill lighten($active-color, 20%)
+			transition all .2s
+		// background linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #656E8D
+		// background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #656E8D;
+	&:active
+	// &:focus
+		background alpha(#656E8D, .14)
+		line, path, circle, rect
+			stroke lighten($active-color, 20%)
+			fill lighten($active-color, 20%)
+			transition all .2s
+
+
+
+	&.active
+		background #656E8D
+		color #2D3242
+		line, path, circle, rect
+			stroke $inactive-color
+			fill $inactive-color
+			transition all .2s
+
+
+		&:hover
+			background lighten(#656E8D, 20%)
+			// background linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #656E8D
+			// line, path, circle, rect
+			// 	stroke lighten($inactive-color, 20%)
+			// 	fill lighten($inactive-color, 20%)
+			// 	transition all .2s
+
+
+		&:active
+		// &:focus
+			background alpha(#656E8D, .7)
+
+			// line, path, circle, rect
+			// 	stroke lighten($inactive-color, 20%)
+			// 	fill lighten($inactive-color, 20%)
+			// 	transition all .2s

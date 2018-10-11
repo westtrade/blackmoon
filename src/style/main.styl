@@ -1,4 +1,28 @@
 @import 'nib/normalize'
 @import 'nib/overflow'
+@import './mixins'
 
 normalize-css()
+
+html
+	height 100%
+
+body
+	background-color #2D3242
+	height 100%
+
+:global
+	#app
+		height 100%
+
+html, body, form, fieldset, table, tr, td, img
+	margin: 0
+	padding: 0
+	font-family 'PT Sans', sans-serif
+
+
+input, button, select, textarea, optgroup, option
+	font-family inherit
+	font-size inherit
+	font-style inherit
+	font-weight inherit

@@ -1,0 +1,56 @@
+make-color(colorName, color)
+	&.{colorName}
+		line, path, circle, rect
+			fill color
+			stroke color
+			transition all .3s
+		&:hover
+			line, path, circle, rect
+				fill lighten(color, 20%)
+				stroke lighten(color, 20%)
+				transition all .3s
+		&:active
+		&:focus
+			line, path, circle, rect
+				opacity .7
+				transition all .3s
+
+svg-colors()
+	make-color('grey', #656E8D)
+	make-color('red', #FF4747)
+	make-color('bkg_canvas', #2D3242)
+	make-color('blue', #0C72D8)
+	make-color('pink', #F34579)
+	make-color('green', #00B865)
+	make-color('highlight', #0C72D8)
+
+	&.cancel
+		line, path, circle, rect
+			fill #656E8D
+			stroke #656E8D
+			transition all .3s
+		&:hover
+			line, path, circle, rect
+				fill #FF4747
+				stroke #FF4747
+				transition all .3s
+		&:active
+		&:focus
+			line, path, circle, rect
+				fill #FF4747
+				stroke #FF4747
+				transition all .3s
+				opacity .7
+
+	&.fix-stroke
+		&:hover
+			line, path, circle, rect
+				stroke none!important
+		line, path, circle, rect
+			stroke none!important
+	&.fix-fill
+		&:hover
+			line, path, circle, rect
+				fill none!important
+		line, path, circle, rect
+			fill none!important

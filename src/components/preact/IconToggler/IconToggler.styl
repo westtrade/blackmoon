@@ -1,0 +1,61 @@
+$inactive-color = #656E8D
+$active-color = #0C72D8
+.wrapper
+	position relative
+	display inline-flex
+	cursor pointer
+	width 25px
+	height 25px
+	&:hover
+		.icon
+			svg
+				opacity 1
+				transition all .2s
+			line, path, circle, rect
+				stroke lighten($inactive-color, 20%)
+				fill lighten($inactive-color, 20%)
+				transition all .2s
+	&:active
+		.icon
+			svg
+				opacity .7
+				transition all .2s
+			line, path, circle, rect
+				stroke $inactive-color
+				fill $inactive-color
+				transition all .2s
+	.icon
+		min-width 100%
+		min-height 100%
+		flex-grow 1
+
+		line, path, circle, rect
+			stroke $inactive-color
+			fill $inactive-color
+			transition all .2s
+
+	&.active
+		&:hover
+			.icon
+				line, path, circle, rect
+					stroke lighten($active-color, 20%)
+					fill lighten($active-color, 20%)
+					transition all .2s
+		&:active
+			.icon
+				line, path, circle, rect
+					stroke $active-color
+					fill $active-color
+					transition all .2s
+				svg
+					opacity .7
+					transition all .2s
+		.icon
+			min-width 100%
+			min-height 100%
+			flex-grow 1
+
+			line, path, circle, rect
+				stroke $active-color
+				fill $active-color
+				transition all .2s

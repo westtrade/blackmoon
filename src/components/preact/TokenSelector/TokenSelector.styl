@@ -1,0 +1,42 @@
+.wrapper
+	min-width 210px
+
+
+
+.header
+	box-sizing border-box
+	padding 10px 15px
+	display flex
+	flex-direction column
+	background-color alpha(#2D3242, .4)
+
+
+.tabs
+	width auto
+	margin-bottom 10px
+
+
+.panel
+	padding 2px 15px
+	line-height 25px
+	font-weight bold
+	text-transform uppercase
+	font-size 12px
+	color #656E8D
+	display flex
+	flex-direction row
+	background-color alpha(#2D3242, .4)
+	&-item
+		cursor pointer
+		flex-grow 1
+		flex-shrink 1
+		height 25px
+		text-align center
+		&:first-child
+			max-width 25px
+		&-active
+			position relative
+
+.list
+	position relative
+	height 100%

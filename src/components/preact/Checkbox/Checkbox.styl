@@ -1,0 +1,86 @@
+.wrapper
+	position relative
+	cursor pointer
+	user-select none
+	&:hover
+		.checkbox
+			// background linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #656E8D
+			background lighten(#656E8D, 20%)
+			transition all .2s
+		.label
+			color lighten(#656E8D, 20%)
+			transition all .2s
+
+	&:active
+		.checkbox
+			background alpha(#656E8D, 70%)
+			transition all .2s
+
+		.label
+			color alpha(#656E8D, 70%)
+
+.checkbox
+	width 25px
+	height 14px
+	border-radius 15px
+	box-sizing border-box
+	padding 2px 3px
+	background #656E8D
+	transition all .2s
+
+
+
+.element
+	display none
+	&-label
+		cursor pointer
+		display flex
+
+
+.handler
+	width 10px
+	height 10px
+	background-color #fff
+	border-radius 50%
+	transition all .2s
+
+
+
+.checked
+	.handler
+		transform translateX(100%)
+		transition all .2s
+
+	.checkbox
+		background #0C72D8
+		transition all .2s
+
+	&:hover
+		.checkbox
+			// background linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #0C72D8
+			background lighten(#0C72D8, 20%)
+			transition all .2s
+		.label
+			color #fff
+			transition all .2s
+
+	&:active
+		.checkbox
+			background #0C72D8
+			transition all .2s
+		.label
+			color alpha(#fff, 70%)
+			transition all .2s
+	.label
+		color #fff
+		transition all .2s
+
+.label
+	color #fff
+	font-variant small-caps
+	font-size 12px
+	margin-left 10px
+	color #656E8D
+	font-size 12px
+	line-height 16px
+	transition all .2s

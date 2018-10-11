@@ -1,0 +1,45 @@
+@import '../../style/variables'
+
+.wrapper
+	height 100%
+	display grid
+	grid-gap 10px
+	grid-template \
+		"selector chart form midprice" \
+		"selector chart form midprice" \
+		"selector history history midprice" 202px
+	grid-template-columns: 210px auto 260px 260px
+	grid-template-rows: auto auto 202px
+
+	+above($desktop-min)
+		grid-template \
+			"selector chart form midprice" \
+			"selector chart form midprice" \
+			"selector history form  midprice"
+		grid-template-columns: 300px auto 300px 300px
+		grid-template-rows: auto auto 202px
+
+	+above($desktop-mid)
+		grid-template \
+			"selector chart form midprice" \
+			"selector chart form midprice" \
+			"selector history history  midprice"
+		grid-template-columns: 300px auto 500px 500px
+		grid-template-rows: 430px auto 500px
+
+
+.token-selector
+	grid-area selector
+
+.chart
+	grid-area chart
+
+
+.trade-form
+	grid-area form
+
+.mid-price
+	grid-area midprice
+
+.orders-table
+	grid-area history

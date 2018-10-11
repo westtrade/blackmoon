@@ -1,0 +1,68 @@
+.wrapper
+	height 45px
+	display inline-flex
+	flex-grow 1
+	flex-shrink 1
+	justify-content space-between
+	flex-direction row
+	flex-wrap wrap
+	padding 0 15px
+
+.item
+	display inline-block
+	color #656E8D
+	font-family 'PT Sans', sans-serif
+	font-style normal
+	font-weight bold
+	line-height normal
+	font-size 14px
+	font-variant small-caps
+	text-transform uppercase
+	cursor pointer
+	height 100%
+	line-height 45px
+	transition .3s ease-in-out
+	flex-grow 0
+	flex-shrink 1
+	text-align center
+	user-select none
+
+	&:hover
+		color #97A3D0
+	&:active
+		color alpha(#656E8D, .7)
+
+
+.active
+	position relative
+	color #0C72D8
+	&::after
+		position absolute
+		content ''
+		display inline-block
+		width 100%
+		left 0
+		bottom 0px
+		height 2px
+		background-color #0C72D8
+
+
+.outlined
+	border 1px solid #656E8D
+	border-radius 4px
+	overflow hidden
+	height 25px
+	padding 0
+	.item
+		line-height 25px
+		border-right solid 1px #656E8D
+		text-align center
+		flex-grow 1
+		flex-shrink 0
+		&:last-child
+			border-right 0
+		&.active
+			color #fff
+			background-color #656E8D
+			&::after
+				display none

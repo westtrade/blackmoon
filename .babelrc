@@ -1,9 +1,10 @@
 {
   "presets": [
-    "babel-preset-env",
-    "babel-preset-react"
+    "@babel/preset-env",
+    "react"
   ],
   "plugins": [
-    "babel-plugin-transform-object-rest-spread"
+    "babel-plugin-transform-object-rest-spread",
+	"syntax-dynamic-import"
   ]
 }

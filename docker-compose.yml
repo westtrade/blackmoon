@@ -1,0 +1,9 @@
+version: '3.2'
+
+services:
+    frontend:
+        image: fholzer/nginx-brotli
+        volumes:
+            - ./dist:/usr/share/nginx/html:ro
+        environment:
+            VIRTUAL_HOST: blackmoon.agent-hive.com
